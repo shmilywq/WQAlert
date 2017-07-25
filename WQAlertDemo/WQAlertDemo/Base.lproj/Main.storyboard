@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyO-DW-1xH">
+                                <rect key="frame" x="137.5" y="120" width="100" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.37423626488601269" blue="0.61002523807601539" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="90i-qm-gff"/>
+                                    <constraint firstAttribute="height" constant="30" id="fud-92-FXF"/>
+                                </constraints>
+                                <state key="normal" title="显示吐司"/>
+                                <connections>
+                                    <action selector="clickShowToastBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3y7-Ka-mau"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlA-EC-oMT">
+                                <rect key="frame" x="137" y="180" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.80899841358515046" green="1" blue="0.24049745705453862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="pwJ-3Z-iNb"/>
+                                    <constraint firstAttribute="height" constant="30" id="rj9-ML-iz5"/>
+                                </constraints>
+                                <state key="normal" title="显示弹框"/>
+                                <connections>
+                                    <action selector="clickShowAlertBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PNh-ca-Rbk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UlA-EC-oMT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="74t-mc-KJB"/>
+                            <constraint firstItem="fyO-DW-1xH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="Etl-KG-vHg"/>
+                            <constraint firstItem="fyO-DW-1xH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hYe-hc-BYd"/>
+                            <constraint firstItem="UlA-EC-oMT" firstAttribute="top" secondItem="fyO-DW-1xH" secondAttribute="bottom" constant="30" id="iEE-6l-0ya"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
