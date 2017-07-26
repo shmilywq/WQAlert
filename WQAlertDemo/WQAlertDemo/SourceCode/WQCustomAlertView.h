@@ -11,6 +11,8 @@
 #import <UIKit/UIKit.h>
 #import "WQAlertActionModel.h"
 
+#define WQAlertView [[WQCustomAlertView alloc] init]
+
 @interface WQCustomAlertView : UIView
 
 /**
@@ -51,7 +53,7 @@
             confirmActionBlock:(WQAClickAction)confirmActionBlock;
 
 /**
- 使用弹框
+ 自定义按钮样式弹框
  
  @param title     标题
  @param message   提醒内容
@@ -61,6 +63,14 @@
                        message:(NSString *)message
                      actionArr:(NSArray<WQAlertActionModel *> *)actionArr;
 
+/**
+ 自定义提醒内容视图的弹框
+
+ @param contentView 提醒内容视图
+ @param actionArr   按钮数组
+ */
+- (void)showAlertViewWithContentView:(UIView *)contentView
+                           actionArr:(NSArray<WQAlertActionModel *> *)actionArr;
 
 
 

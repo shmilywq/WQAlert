@@ -16,9 +16,10 @@
 		46574C3E1F27283F0023B369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46574C3C1F27283F0023B369 /* LaunchScreen.storyboard */; };
 		46574C491F27283F0023B369 /* WQAlertDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46574C481F27283F0023B369 /* WQAlertDemoTests.m */; };
 		46574C541F27283F0023B369 /* WQAlertDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46574C531F27283F0023B369 /* WQAlertDemoUITests.m */; };
-		46574C651F2728740023B369 /* WQToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46574C641F2728740023B369 /* WQToastView.m */; };
+		46574C651F2728740023B369 /* WQCustomToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46574C641F2728740023B369 /* WQCustomToastView.m */; };
 		46574C691F272AA90023B369 /* WQCustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46574C681F272AA90023B369 /* WQCustomAlertView.m */; };
 		46574C6F1F272B450023B369 /* WQAlertActionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46574C6E1F272B450023B369 /* WQAlertActionModel.m */; };
+		46919F2C1F288833008D68D6 /* WQAlertActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46919F2B1F288833008D68D6 /* WQAlertActionCell.m */; };
 		4C3E572053CB942BBD66E370 /* libPods-WQAlertDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1EA9AEFAF84DBB7E87E31B /* libPods-WQAlertDemoTests.a */; };
 		F43DD8124F9B5731FBBCA370 /* libPods-WQAlertDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0684E59C846CC59D19D3C6CC /* libPods-WQAlertDemo.a */; };
 /* End PBXBuildFile section */
@@ -60,13 +61,15 @@
 		46574C4F1F27283F0023B369 /* WQAlertDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WQAlertDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46574C531F27283F0023B369 /* WQAlertDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQAlertDemoUITests.m; sourceTree = "<group>"; };
 		46574C551F27283F0023B369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		46574C631F2728740023B369 /* WQToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQToastView.h; sourceTree = "<group>"; };
-		46574C641F2728740023B369 /* WQToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQToastView.m; sourceTree = "<group>"; };
+		46574C631F2728740023B369 /* WQCustomToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCustomToastView.h; sourceTree = "<group>"; };
+		46574C641F2728740023B369 /* WQCustomToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCustomToastView.m; sourceTree = "<group>"; };
 		46574C661F27288A0023B369 /* WQAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WQAlert.h; sourceTree = "<group>"; };
 		46574C671F272AA90023B369 /* WQCustomAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQCustomAlertView.h; sourceTree = "<group>"; };
 		46574C681F272AA90023B369 /* WQCustomAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCustomAlertView.m; sourceTree = "<group>"; };
 		46574C6D1F272B450023B369 /* WQAlertActionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAlertActionModel.h; sourceTree = "<group>"; };
 		46574C6E1F272B450023B369 /* WQAlertActionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAlertActionModel.m; sourceTree = "<group>"; };
+		46919F2A1F288833008D68D6 /* WQAlertActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAlertActionCell.h; sourceTree = "<group>"; };
+		46919F2B1F288833008D68D6 /* WQAlertActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAlertActionCell.m; sourceTree = "<group>"; };
 		62741174697AE4E7CECBF54A /* Pods-WQAlertDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WQAlertDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WQAlertDemoTests/Pods-WQAlertDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F53B8CE9B2C4A9CC61325B2 /* Pods-WQAlertDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WQAlertDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WQAlertDemoUITests/Pods-WQAlertDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB094E498BCA64761EE178D1 /* libPods-WQAlertDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WQAlertDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,12 +188,14 @@
 			isa = PBXGroup;
 			children = (
 				46574C661F27288A0023B369 /* WQAlert.h */,
-				46574C631F2728740023B369 /* WQToastView.h */,
-				46574C641F2728740023B369 /* WQToastView.m */,
+				46574C631F2728740023B369 /* WQCustomToastView.h */,
+				46574C641F2728740023B369 /* WQCustomToastView.m */,
 				46574C671F272AA90023B369 /* WQCustomAlertView.h */,
 				46574C681F272AA90023B369 /* WQCustomAlertView.m */,
 				46574C6D1F272B450023B369 /* WQAlertActionModel.h */,
 				46574C6E1F272B450023B369 /* WQAlertActionModel.m */,
+				46919F2A1F288833008D68D6 /* WQAlertActionCell.h */,
+				46919F2B1F288833008D68D6 /* WQAlertActionCell.m */,
 			);
 			path = SourceCode;
 			sourceTree = "<group>";
@@ -487,10 +492,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				46574C361F27283F0023B369 /* ViewController.m in Sources */,
+				46919F2C1F288833008D68D6 /* WQAlertActionCell.m in Sources */,
 				46574C331F27283F0023B369 /* AppDelegate.m in Sources */,
 				46574C6F1F272B450023B369 /* WQAlertActionModel.m in Sources */,
 				46574C691F272AA90023B369 /* WQCustomAlertView.m in Sources */,
-				46574C651F2728740023B369 /* WQToastView.m in Sources */,
+				46574C651F2728740023B369 /* WQCustomToastView.m in Sources */,
 				46574C301F27283F0023B369 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,6 +739,7 @@
 				46574C5A1F27283F0023B369 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46574C5B1F27283F0023B369 /* Build configuration list for PBXNativeTarget "WQAlertDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -741,6 +748,7 @@
 				46574C5D1F27283F0023B369 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46574C5E1F27283F0023B369 /* Build configuration list for PBXNativeTarget "WQAlertDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -749,6 +757,7 @@
 				46574C601F27283F0023B369 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

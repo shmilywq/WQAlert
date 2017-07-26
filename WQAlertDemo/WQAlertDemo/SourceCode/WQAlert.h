@@ -9,6 +9,7 @@
 #ifndef WQAlert_h
 #define WQAlert_h
 
-#import "WQToastView.h"
+#import "WQCustomToastView.h"
+#import "WQCustomAlertView.h"
 
 #endif /* WQAlert_h */

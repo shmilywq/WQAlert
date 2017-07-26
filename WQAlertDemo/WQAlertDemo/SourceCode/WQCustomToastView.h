@@ -1,5 +1,5 @@
 //
-//  WQToastView.h
+//  WQCustomToastView.h
 //  WQAlertDemo
 //
 //  Created by shmily on 2017/7/25.
@@ -10,9 +10,9 @@
  */
 #import <UIKit/UIKit.h>
 
-#define WQToast [WQToastView shareToast]
+#define WQToastView [WQCustomToastView shareToast]
 
-@interface WQToastView : UIWindow
+@interface WQCustomToastView : UIWindow
 
 /**
  文字字号, 默认: [UIFont systemFontOfSize:15.f];
@@ -39,7 +39,7 @@
 
  @return 单例对象
  */
-+ (WQToastView *)shareToast;
++ (WQCustomToastView *)shareToast;
 /**
  *  显示内容
  *

@@ -1,12 +1,12 @@
 //
-//  WQToastView.m
+//  WQCustomToastView.m
 //  WQAlertDemo
 //
 //  Created by shmily on 2017/7/25.
 //  Copyright © 2017年 shmily. All rights reserved.
 //
 
-#import "WQToastView.h"
+#import "WQCustomToastView.h"
 
 
 #pragma mark - RootViewController
@@ -24,21 +24,21 @@
 @end
 /***************** END *****************/
 
-@interface WQToastView ()
+@interface WQCustomToastView ()
 
 @property (nonatomic, strong) UILabel *msgLabel; // 提醒内容
 @property (nonatomic, strong) NSTimer *showTimer; // 显示时间计时器
 
 @end
 
-@implementation WQToastView
+@implementation WQCustomToastView
 
-+ (WQToastView *)shareToast
++ (WQCustomToastView *)shareToast
 {
-    static WQToastView *toastView = nil;
+    static WQCustomToastView *toastView = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        toastView = [[WQToastView alloc] init];
+        toastView = [[WQCustomToastView alloc] init];
     });
     return toastView;
 }
