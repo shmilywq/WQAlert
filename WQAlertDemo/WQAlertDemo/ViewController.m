@@ -76,7 +76,7 @@
     }];
     model2.textFont = [UIFont systemFontOfSize:15.f];
     model2.textColor = [UIColor yellowColor];
-    NSArray *modelArr = @[model1, model2];
+    NSArray *modelArr = @[model1, model2]; 
     [WQAlertView showAlertViewWithContentView:contentView actionArr:modelArr];
 }
 
