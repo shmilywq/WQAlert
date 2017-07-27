@@ -11,5 +11,6 @@
 
 #import "WQCustomToastView.h"
 #import "WQCustomAlertView.h"
+#import "WQAlertActionModel.h"
 
 #endif /* WQAlert_h */
