@@ -119,9 +119,9 @@
     if (self.itemDateArr.count == 0) {
         return CGSizeZero;
     } else if (self.itemDateArr.count == 2) {
-        return CGSizeMake((kWQAlertViewWidth - 1.0f) / 2.0, kWQItemHeight);
+        return CGSizeMake((self.contentBGView.wq_width - 1.0f) / 2.0, kWQItemHeight);
     } else {
-        return CGSizeMake(kWQAlertViewWidth, kWQItemHeight);
+        return CGSizeMake(self.contentBGView.wq_width, kWQItemHeight);
     }
 }
 
@@ -147,22 +147,27 @@
 - (void)updateSubViewsFrameWithContentView:(UIView *)contentView
 {
     contentView.wq_origin = CGPointMake(0.f, 0.f);
+    if (contentView.wq_width > kWQScreenWidth) {
+        contentView.wq_width = kWQAlertViewWidth;
+    }
     [self.contentBGView addSubview:contentView];
     self.contentBGView.frame = contentView.frame;
-    self.vLineView.frame = CGRectMake(0.f, self.contentBGView.wq_bottom, kWQAlertViewWidth, 1.f);
+    CGFloat alertViewWidth = contentView.wq_width;
+    self.vLineView.frame = CGRectMake(0.f, self.contentBGView.wq_bottom, alertViewWidth, 1.f);
     if (self.itemDateArr.count == 2) {
         // 2个按钮
-        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, self.vLineView.wq_bottom, kWQAlertViewWidth, kWQItemHeight) collectionViewLayout:self.horizontalLayout];
+        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, self.vLineView.wq_bottom, alertViewWidth, kWQItemHeight) collectionViewLayout:self.horizontalLayout];
     } else {
         CGFloat collectionViewHeight = kWQItemHeight * self.itemDateArr.count + (self.itemDateArr.count - 1);
-        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, self.vLineView.wq_bottom, kWQAlertViewWidth, collectionViewHeight) collectionViewLayout:self.verticalLayout];
+        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, self.vLineView.wq_bottom, alertViewWidth, collectionViewHeight) collectionViewLayout:self.verticalLayout];
     }
     self.collectionView.backgroundColor = kWQCutLineColor;
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView registerClass:[WQAlertActionCell class] forCellWithReuseIdentifier:@"WQAlertActionCell"];
     [self.bgView addSubview:self.collectionView];
-    self.bgView.frame = CGRectMake(kWQAlertViewLeftAndRightMargin, 0, kWQAlertViewWidth, self.collectionView.wq_bottom);
+    CGFloat bgViewX = (kWQScreenWidth - alertViewWidth) / 2;
+    self.bgView.frame = CGRectMake(bgViewX, 0, alertViewWidth, self.collectionView.wq_bottom);
     self.bgView.center = self.center;
 }
 #pragma mark - SubViews

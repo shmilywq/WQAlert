@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "WQAlert.h"
+#import <WQViewFrame/UIView+WQFrame.h>
+
 @interface ViewController ()
 
 @end
@@ -52,7 +54,30 @@
     NSArray *modelArr = @[model1, model2, model3];
     [WQAlertView showAlertViewWithTitle:@"多按钮弹框" message:@"come on! 来吧,亮亮相吧! 小宝贝! " actionArr:modelArr];
 }
+//显示自定义弹窗
 - (IBAction)clickShowCustomAlertBtnAction:(id)sender {
+    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 230, 195)];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 210, 150)];
+    imgView.image = [UIImage imageNamed:@"wow.jpg"];
+    [contentView addSubview:imgView];
+    UILabel *msgLb = [[UILabel alloc] initWithFrame:CGRectMake(imgView.wq_x, imgView.wq_bottom + 5, imgView.wq_width, 20)];
+    msgLb.text = @"wow! 这是自定义弹框!";
+    msgLb.font = [UIFont systemFontOfSize:15.f];
+    msgLb.textColor = [UIColor blueColor];
+    [contentView addSubview:msgLb];
+    
+    WQAlertActionModel *model1 = [WQAlertActionModel actionModelWithTitle:@"取消" actionBlock:^{
+        [WQToastView showToastWithMessage:@"假的"];
+    }];
+    model1.textFont = [UIFont systemFontOfSize:15.f];
+    model1.textColor = [UIColor redColor];
+    WQAlertActionModel *model2 = [WQAlertActionModel actionModelWithTitle:@"确定" actionBlock:^{
+        [WQToastView showToastWithMessage:@"真的"];
+    }];
+    model2.textFont = [UIFont systemFontOfSize:15.f];
+    model2.textColor = [UIColor yellowColor];
+    NSArray *modelArr = @[model1, model2];
+    [WQAlertView showAlertViewWithContentView:contentView actionArr:modelArr];
 }
 
 - (void)didReceiveMemoryWarning {

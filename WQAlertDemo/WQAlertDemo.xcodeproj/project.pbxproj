@@ -19,6 +19,7 @@
 		46574C651F2728740023B369 /* WQCustomToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46574C641F2728740023B369 /* WQCustomToastView.m */; };
 		46574C691F272AA90023B369 /* WQCustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46574C681F272AA90023B369 /* WQCustomAlertView.m */; };
 		46574C6F1F272B450023B369 /* WQAlertActionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 46574C6E1F272B450023B369 /* WQAlertActionModel.m */; };
+		466D2E8B1F297B9700884D7E /* wow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 466D2E8A1F297B9700884D7E /* wow.jpg */; };
 		46919F2C1F288833008D68D6 /* WQAlertActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46919F2B1F288833008D68D6 /* WQAlertActionCell.m */; };
 		4C3E572053CB942BBD66E370 /* libPods-WQAlertDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1EA9AEFAF84DBB7E87E31B /* libPods-WQAlertDemoTests.a */; };
 		F43DD8124F9B5731FBBCA370 /* libPods-WQAlertDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0684E59C846CC59D19D3C6CC /* libPods-WQAlertDemo.a */; };
@@ -68,6 +69,7 @@
 		46574C681F272AA90023B369 /* WQCustomAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQCustomAlertView.m; sourceTree = "<group>"; };
 		46574C6D1F272B450023B369 /* WQAlertActionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAlertActionModel.h; sourceTree = "<group>"; };
 		46574C6E1F272B450023B369 /* WQAlertActionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAlertActionModel.m; sourceTree = "<group>"; };
+		466D2E8A1F297B9700884D7E /* wow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wow.jpg; sourceTree = "<group>"; };
 		46919F2A1F288833008D68D6 /* WQAlertActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQAlertActionCell.h; sourceTree = "<group>"; };
 		46919F2B1F288833008D68D6 /* WQAlertActionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQAlertActionCell.m; sourceTree = "<group>"; };
 		62741174697AE4E7CECBF54A /* Pods-WQAlertDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WQAlertDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WQAlertDemoTests/Pods-WQAlertDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				46574C321F27283F0023B369 /* AppDelegate.m */,
 				46574C341F27283F0023B369 /* ViewController.h */,
 				46574C351F27283F0023B369 /* ViewController.m */,
+				466D2E8A1F297B9700884D7E /* wow.jpg */,
 				46574C371F27283F0023B369 /* Main.storyboard */,
 				46574C3A1F27283F0023B369 /* Assets.xcassets */,
 				46574C3C1F27283F0023B369 /* LaunchScreen.storyboard */,
@@ -329,6 +332,7 @@
 				46574C3E1F27283F0023B369 /* LaunchScreen.storyboard in Resources */,
 				46574C3B1F27283F0023B369 /* Assets.xcassets in Resources */,
 				46574C391F27283F0023B369 /* Main.storyboard in Resources */,
+				466D2E8B1F297B9700884D7E /* wow.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
