@@ -72,6 +72,39 @@
 - (void)showAlertViewWithContentView:(UIView *)contentView
                            actionArr:(NSArray<WQAlertActionModel *> *)actionArr;
 
-
+/**
+ *  系统弹框, 按钮可以只有一个
+ *
+ *  @param title              标题
+ *  @param message            提醒内容
+ *  @param cancelBtnTitle     取消按钮标题
+ *  @param confirmBtnTitle    确认按钮标题
+ *  @param cancelActionBlock  取消事件回调
+ *  @param confirmActionBlock 确定事件回调
+ */
+- (void)showSystemAlertViewWithTitle:(NSString *)title
+                       message:(NSString *)message
+                cancelBtnTitle:(NSString *)cancelBtnTitle
+             cancelActionBlock:(WQAClickAction)cancelActionBlock
+               confirmBtnTitle:(NSString *)confirmBtnTitle
+            confirmActionBlock:(WQAClickAction)confirmActionBlock;
+/**
+ *  系统弹框, 按钮可以只有一个
+ *
+ *  @param fromVC             显示的控制器
+ *  @param title              标题
+ *  @param message            提醒内容
+ *  @param cancelBtnTitle     取消按钮标题
+ *  @param cancelActionBlock  取消事件回调
+ *  @param confirmBtnTitle    确认按钮标题
+ *  @param confirmActionBlock 确定事件回调
+ */
+- (void)showSystemAlertViewWithFromVC:(UIViewController *)fromVC
+                          title:(NSString *)title
+                        message:(NSString *)message
+                 cancelBtnTitle:(NSString *)cancelBtnTitle
+              cancelActionBlock:(WQAClickAction)cancelActionBlock
+                confirmBtnTitle:(NSString *)confirmBtnTitle
+             confirmActionBlock:(WQAClickAction)confirmActionBlock;
 
 @end

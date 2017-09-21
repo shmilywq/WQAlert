@@ -321,6 +321,52 @@
     }
     return _itemDateArr;
 }
+#pragma mark - 系统原生方法
+- (void)showSystemAlertViewWithTitle:(NSString *)title message:(NSString *)message cancelBtnTitle:(NSString *)cancelBtnTitle cancelActionBlock:(WQAClickAction)cancelActionBlock confirmBtnTitle:(NSString *)confirmBtnTitle confirmActionBlock:(WQAClickAction)confirmActionBlock
+{
+    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    // 添加按钮
+    if (cancelBtnTitle) {
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelBtnTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            if (cancelActionBlock) {
+                cancelActionBlock();
+            }
+        }];
+        [alertC addAction:cancelAction];
+    }
+    if (confirmBtnTitle) {
+        UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:confirmBtnTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            if (confirmActionBlock) {
+                confirmActionBlock();
+            }
+        }];
+        [alertC addAction:confirmAction];
+    }
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    [keyWindow.rootViewController presentViewController:alertC animated:YES completion:nil];
+}
+- (void)showSystemAlertViewWithFromVC:(UIViewController *)fromVC title:(NSString *)title message:(NSString *)message cancelBtnTitle:(NSString *)cancelBtnTitle cancelActionBlock:(WQAClickAction)cancelActionBlock confirmBtnTitle:(NSString *)confirmBtnTitle confirmActionBlock:(WQAClickAction)confirmActionBlock
+{
+    UIAlertController *alertC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    // 添加按钮
+    if (cancelBtnTitle) {
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelBtnTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            if (cancelActionBlock) {
+                cancelActionBlock();
+            }
+        }];
+        [alertC addAction:cancelAction];
+    }
+    if (confirmBtnTitle) {
+        UIAlertAction *confirmAction = [UIAlertAction actionWithTitle:confirmBtnTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            if (confirmActionBlock) {
+                confirmActionBlock();
+            }
+        }];
+        [alertC addAction:confirmAction];
+    }
+    [fromVC presentViewController:alertC animated:YES completion:nil];
+}
 
 
 @end
