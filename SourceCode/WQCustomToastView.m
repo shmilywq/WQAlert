@@ -64,6 +64,7 @@
     _msgFont = [UIFont systemFontOfSize:15.f];
     _msgAlignment = NSTextAlignmentLeft;
     _showTime = 1.5f;
+    _toastPlace = WQToastViewPlace_Bottom;
 }
 #pragma mark - 显示/消失
 // 显示
@@ -112,18 +113,44 @@
     NSDictionary * attributes = @{NSFontAttributeName : _msgFont, NSParagraphStyleAttributeName : paragraphStyle};
     CGFloat viewMargin = 40.f; // 弹框距屏幕边缘的最小距离
     CGFloat laberMargin = 10.f; // 文字距弹框的边距
-    CGFloat maxWidth = screenWidth - 2 * viewMargin - 2 * laberMargin;
-    CGFloat oneLineTextWidth = [text sizeWithAttributes:@{NSFontAttributeName:_msgFont}].width;
+    CGFloat maxWidth = screenWidth - 2 * viewMargin - 2 * laberMargin; // 文字最大宽度
+    CGFloat maxHeight = screenHeight - 2 * viewMargin - 2 * laberMargin; // 文字最大高度
+    CGFloat oneLineTextWidth = [text sizeWithAttributes:@{NSFontAttributeName:_msgFont}].width; // 单行文字的宽度
+    // 如果单行文本宽度大于最大限制, 则按最大限制计算多行的
     maxWidth = maxWidth > (oneLineTextWidth + 2 * laberMargin) ? oneLineTextWidth + 2 * laberMargin : maxWidth;
     CGSize contentSize = [text boundingRectWithSize:CGSizeMake(maxWidth, MAXFLOAT)options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading) attributes:attributes context:nil].size;
-    CGFloat toastWidth = contentSize.width + 2 * laberMargin;
-    CGFloat toastHeight = contentSize.height + 2 * laberMargin;
-    CGFloat toastBottom = screenHeight * 0.39;
+    if (contentSize.height > maxHeight) {
+        contentSize.height = maxHeight;
+    }
+    _msgLabel.frame = CGRectMake(laberMargin, laberMargin, contentSize.width, contentSize.height);
+    
+    CGFloat toastWidth = contentSize.width + 2 * laberMargin; // 吐司的宽度
+    CGFloat toastHeight = contentSize.height + 2 * laberMargin; // 吐司的高度
+    CGFloat toastY = 0.f;
+    switch (_toastPlace) {
+        case WQToastViewPlace_Top:
+        {
+            toastY = viewMargin;
+        }
+            break;
+        case WQToastViewPlace_Middle:
+        {
+            toastY = (screenHeight - toastHeight)/2;
+        }
+            break;
+        case WQToastViewPlace_Bottom:
+        {
+            toastY = screenHeight - toastHeight - viewMargin;
+        }
+            break;
+        default:
+            break;
+    }
+    
     self.frame = CGRectMake((screenWidth - toastWidth)/2,
-                            screenHeight - toastHeight - toastBottom,
+                            toastY,
                             toastWidth,
                             toastHeight);
-    _msgLabel.frame = CGRectMake(laberMargin, laberMargin, contentSize.width, contentSize.height);
 }
 
 #pragma mark - SubViews

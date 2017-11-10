@@ -12,6 +12,13 @@
 
 #define WQToastView [WQCustomToastView shareToast]
 
+typedef enum : NSUInteger {
+    WQToastViewPlace_Top = 1, // 顶部显示
+    WQToastViewPlace_Middle = 2, // 中间显示
+    WQToastViewPlace_Bottom = 3, // 下部显示
+} WQToastViewPlace;
+
+
 @interface WQCustomToastView : UIWindow
 
 /**
@@ -33,6 +40,11 @@
  吐司显示时间, 默认: 1.5s
  */
 @property (nonatomic, assign) NSTimeInterval showTime;
+
+/**
+ 吐司位置, 默认:WQToastViewPlace_Bottom(下面显示)
+ */
+@property (nonatomic, assign) WQToastViewPlace toastPlace;
 
 /**
  单例初始化方法
