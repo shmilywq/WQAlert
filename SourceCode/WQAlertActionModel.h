@@ -11,9 +11,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef void(^WQAClickAction)(void); // 按钮点击事件的回调
 @interface WQAlertActionModel : NSObject
 
-typedef void(^WQAClickAction)(); // 按钮点击事件的回调
 
 /**
  按钮文字
